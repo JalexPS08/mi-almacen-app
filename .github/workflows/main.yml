@@ -30,8 +30,8 @@ jobs:
 
       - name: Build APK
         run: |
-          # Usamos un comando más simple para evitar el error 2
-          flet build apk --project "Mi Almacén" --icon "icono.png"
+          # Cambiamos la forma de llamar al icono para que la versión 0.82.0 no de error
+          flet build apk --project "Mi Almacén" --product "Mi Almacen" --icon "./icono.png"
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
