@@ -30,5 +30,11 @@ jobs:
 
       - name: Build APK
         run: |
-          # Usamos el comando más básico posible para que no falle nada
+          # Comando básico para evitar errores de versión
           flet build apk
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: Mi_Almacen_App
+          path: build/apk/*.apk
