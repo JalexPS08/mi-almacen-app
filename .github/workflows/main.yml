@@ -1,4 +1,4 @@
-name: Build Flet APK - v3 con Icono
+name: Build Flet APK
 
 on:
   push:
@@ -23,14 +23,14 @@ jobs:
         with:
           channel: 'stable'
 
-      - name: Install Flet
+      - name: Install Dependencies
         run: |
           python3 -m pip install --upgrade pip
           pip install flet
 
       - name: Build APK
         run: |
-          # El comando ahora buscará "icono.png" y pondrá el nombre "Mi Almacén"
+          # Usamos un comando más simple para evitar el error 2
           flet build apk --project "Mi Almacén" --icon "icono.png"
 
       - name: Upload APK
