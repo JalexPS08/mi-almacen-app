@@ -38,3 +38,6 @@ jobs:
         with:
           name: Mi_Almacen_App
           path: build/apk/*.apk
+        with:
+          name: Mi_Almacen_App
+          path: build/apk/*.apk
